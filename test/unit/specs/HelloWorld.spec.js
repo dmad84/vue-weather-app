@@ -1,5 +1,9 @@
 import Vue from 'vue'
 import HelloWorld from '@/components/HelloWorld'
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+
+const http = require('http');
 
 describe('HelloWorld.vue', () => {
   it('should render correct contents', () => {
