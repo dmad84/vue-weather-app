@@ -42,3 +42,15 @@ jobs:
       branch: master
       heroku:
         appname: deepa-vue-weather-app
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
