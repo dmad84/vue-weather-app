@@ -39,8 +39,8 @@ jobs:
       - run: npm test
 
       - deployment:
-        staging:
-          branch: master
-          heroku:
-            appname: deepa-vue-weather-app
+          staging:
+            branch: master
+            heroku:
+              appname: deepa-vue-weather-app
 
