@@ -6,7 +6,7 @@
         <div class="col-12 col-md-8 col-lg-4">
           <div class="card">
             <div class="card-head">
-              <h5 class="card-title">{{ weather.name }} <img :src="'http://openweathermap.org/img/w/' + weather.weather[0].icon + '.png'" /></h5>
+              <h5 class="card-title">{{ weather.name }} <img :src="'https://openweathermap.org/img/w/' + weather.weather[0].icon + '.png'" /></h5>
             </div>
             <div class="card-body">
               <h5 class="card-title">{{ weather.weather[0].description }}</h5>
