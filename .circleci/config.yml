@@ -41,4 +41,4 @@ jobs:
       - deploy:
           name: Deploy Master to Heroku
           command: |
-            git push heroku master
+            git push https://heroku:20887f5c-b739-4511-9295-92adac4cf312@git.heroku.com/deepa-weather-vue-app.git master
