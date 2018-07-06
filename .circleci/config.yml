@@ -3,9 +3,6 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-post:
-    - run: npm install -g codeclimate-test-reporter
-    - run: codeclimate-test-reporter < coverage/lcov.info
 jobs:
   build:
     docker:
@@ -40,6 +37,8 @@ jobs:
       
       # run tests!
       - run: npm test
+
+      - run: codeclimate-test-reporter < coverage/lcov.info
 
       - deploy:
           name: Deploy Master to Heroku
