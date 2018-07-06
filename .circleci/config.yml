@@ -45,3 +45,9 @@ jobs:
           command: |
             git push https://heroku:20887f5c-b739-4511-9295-92adac4cf312@git.heroku.com/deepa-weather-vue-app.git master
       
+  test:
+  override:
+    - npm test
+  post:
+    - npm install -g codeclimate-test-reporter
+    - codeclimate-test-reporter < coverage/lcov.info
