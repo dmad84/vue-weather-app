@@ -42,6 +42,7 @@ jobs:
           name: Deploy Master to Heroku
           command: |
             git push https://heroku:20887f5c-b739-4511-9295-92adac4cf312@git.heroku.com/deepa-weather-vue-app.git master
-  post:
-    - npm install -g codeclimate-test-reporter
-    - codeclimate-test-reporter < test/unit/coverage/lcov.info
+      
+      post:
+        - npm install -g codeclimate-test-reporter
+        - codeclimate-test-reporter < test/unit/coverage/lcov.info
