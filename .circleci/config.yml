@@ -42,7 +42,7 @@ jobs:
       - run: chmod +x ./cc-test-reporter
 
       # run tests!
-      - run: npm test
+      - run: npm test:prod
 
       # Send test coverage to Code Climate
       - run: ./cc-test-reporter after-build --debug --coverage-input-type lcov --exit-code $?
