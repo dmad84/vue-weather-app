@@ -25,7 +25,7 @@
 import WeatherService from '@/services/WeatherService'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Weather',
   data () {
     return {
       weathersList: {},
