@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import WeatherService from '@/services/WeatherService'
 
 export default {
   name: 'HelloWorld',
@@ -34,17 +34,12 @@ export default {
     }
   },
   created: function () {
-    this.fetchData()
+    this.getWeather()
   },
   methods: {
-    fetchData: function () {
-      axios.get('https://api.openweathermap.org/data/2.5/group?id=2650225,2673730&units=metric&APPID=2224f0fb90f0d015e442ca2c30f99d9d')
-        .then(response => {
-          // get body data
-          this.weathersList = response.data.list
-        }).catch(error => {
-          this.message = error
-        })
+    async getWeather () {
+      const response = await WeatherService.getWeather()
+      this.weathersList = response.data.list
     }
   }
 }

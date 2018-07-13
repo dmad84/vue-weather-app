@@ -1,8 +1,5 @@
 import Vue from 'vue'
 import HelloWorld from '@/components/HelloWorld'
-import axios from 'axios'
-
-const http = require('http');
 
 describe('HelloWorld.vue', () => {
   it('should render correct contents', () => {
