@@ -14,11 +14,11 @@
     "postinstall": "npm run build"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.1.1",
     "codeclimate-test-reporter": "^0.5.0",
     "express": "^4.16.3",
     "vue": "^2.5.2",
-    "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

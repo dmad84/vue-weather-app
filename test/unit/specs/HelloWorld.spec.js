@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import HelloWorld from '@/components/HelloWorld'
-import VueResource from 'vue-resource'
-Vue.use(VueResource)
+import axios from 'axios'
 
 const http = require('http');
 

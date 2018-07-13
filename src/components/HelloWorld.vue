@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -36,13 +38,13 @@ export default {
   },
   methods: {
     fetchData: function () {
-      this.$http.get('https://api.openweathermap.org/data/2.5/group?id=2650225,2673730&units=metric&APPID=2224f0fb90f0d015e442ca2c30f99d9d').then(function (response) {
-        // get body data
-        this.weathersList = response.body.list
-      }).catch(function (error) {
-        this.message = error
-        console.log(error.body.message)
-      })
+      axios.get('https://api.openweathermap.org/data/2.5/group?id=2650225,2673730&units=metric&APPID=2224f0fb90f0d015e442ca2c30f99d9d')
+        .then(response => {
+          // get body data
+          this.weathersList = response.data.list
+        }).catch(error => {
+          this.message = error
+        })
     }
   }
 }
