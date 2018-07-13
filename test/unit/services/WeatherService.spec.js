@@ -46,7 +46,7 @@ describe('getWeather() using Promises', () => {
     })
   })
 
-  it('should load user data', () => {
+  it('should load weather data', () => {
     return WeatherService.getWeather()
       .then(response => {
         expect(response).toBeDefined()
